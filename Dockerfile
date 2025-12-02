@@ -1,4 +1,4 @@
-FROM node:14.19-alpine3.15 as DEPENDENCIES
+FROM node:18-alpine as DEPENDENCIES
 
 WORKDIR /usr/app
 
@@ -10,7 +10,7 @@ RUN npm install
 
 
 
-FROM node:14.19-alpine3.15 as BUILDER_STEP
+FROM node:18-alpine as BUILDER_STEP
 
 WORKDIR /usr/app
 
@@ -31,7 +31,7 @@ RUN npm run build
 
 
 
-FROM node:14.19-alpine3.15
+FROM node:18-alpine
 
 WORKDIR /usr/app
 
