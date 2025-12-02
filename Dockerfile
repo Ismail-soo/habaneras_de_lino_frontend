@@ -50,6 +50,6 @@ COPY --from=BUILDER_STEP /usr/app/public ./public
 
 
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["node_modules/.bin/next", "start"]
